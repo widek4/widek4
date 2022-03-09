@@ -14,7 +14,7 @@ function setup() {
   colorMode(HSB);
   createCanvas(800, 800);
   slider = createSlider(1, 13, 10, 1);
-  sliderSize = createSlider(0,1,0.7,0.05);
+  sliderSize = createSlider(0,1,0.7,0.01);
   sliderSize.position(10,25);
   slider.position(10, 10);
   slider.style('width', '150px');
