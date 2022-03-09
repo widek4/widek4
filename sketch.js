@@ -12,7 +12,7 @@ let checkbox;
 function setup() {
   colorMode(HSB);
   createCanvas(800, 800);
-  slider = createSlider(1, 13, 5, 1);
+  slider = createSlider(1, 13, 10, 1);
   slider.position(10, 10);
   slider.style('width', '80px');
   min = map(minute(),0,60,0,TWO_PI);
