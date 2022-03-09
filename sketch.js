@@ -6,15 +6,27 @@ let hours;
 let size = 0.7;
 let showHours = false;
 let dt = 0;
+let slider;
+let checkbox;
 
 function setup() {
   colorMode(HSB);
   createCanvas(800, 800);
+  slider = createSlider(1, 13, 5, 1);
+  slider.position(10, 10);
+  slider.style('width', '80px');
   min = map(minute(),0,60,0,TWO_PI);
+  checkbox = createCheckbox('Heures', false);
   //fullScreen();
 }
 
 function draw() {
+  if (checkbox.checked()) {
+    showHours = true;
+  } else {
+    showHours = false;
+  }
+  depth = slider.value();
   background(0);
   //fill(255);text(frameRate, 10, 10);noFill();
   translate(width/2, height/2);
@@ -30,7 +42,7 @@ function draw() {
   min = map(minute(),0,60,0,TWO_PI);
   hours= map(hour()%12, 0, 12, 0, TWO_PI);
   drawAiguilles(0, 0, 0, scl, 0);
-  dt+=0.5;
+  dt+=0.2;
 }
 
 function drawAiguilles(iter,  x,  y,  scale,  phi) {
