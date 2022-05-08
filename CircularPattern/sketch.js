@@ -1,5 +1,5 @@
 angle=0;
-NUM_CERCLE=3;
+NUM_CERCLE=7;
 SIZE = 800/(NUM_CERCLE+1);
 R = SIZE/2;
 precision = 10;
