@@ -29,7 +29,7 @@ function draw(){
   for (let i=0;i<n_dots;i++){
     let x = i*(width/n_dots)+2*radius;
     //float y = 400+100*sin(map(i,0,n_dots,0,TWO_PI)+offset);
-    let y = (height/2)-100*exp(-pow(((map(i,0,n_dots,-3,3)-offset+TWO_PI/3)%7)+3,2));
+    let y = (height/2)-100*exp(-pow(((map(i,0,n_dots,-3,3)-2*offset+TWO_PI/3)%7)+3,2));
     //float y = (height/2)-100*sin(map(i,0,n_dots,0,3*PI)-2*offset+PI/3);
     //println(((map(i,0,n_dots,-3,3)-offset)%6)+3);
     fill(255);
@@ -44,7 +44,7 @@ function draw(){
   for (let i=0;i<n_dots;i++){
     let x = i*(width/n_dots)+2*radius;
     //float y = 400+100*sin(map(i,0,n_dots,0,TWO_PI)+offset);
-    let y = (height/2)-100*exp(-pow(((map(i,0,n_dots,-3,3)-offset+PI/3)%7)+3,2));
+    let y = (height/2)-100*exp(-pow(((map(i,0,n_dots,-3,3)-3*offset+PI/3)%7)+3,2));
     //float y = (height/2)-100*sin(map(i,0,n_dots,0,3*PI)-3*offset+2*PI/3);
     //println(((map(i,0,n_dots,-3,3)-offset)%6)+3);
     fill(255);
