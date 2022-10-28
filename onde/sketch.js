@@ -1,28 +1,10 @@
 let PI = 3.141592;
-let sliderGroup = [];
-let X;
-let Y;
-let Z;
-let centerX;
-let centerY;
-let centerZ;
-let h = 25;
 let phi_s;
 
 function setup(){
   createCanvas(800,800, WEBGL);
   phi_s=createSlider(0,TWO_PI,PI/2,0.1);
-  sliderGroup[0] = createSlider(-400, 400, -200);
-  sliderGroup[1] = createSlider(-400, 400, -200);
-  sliderGroup[2] = createSlider(10, 400, 200);
-  sliderGroup[3] = createSlider(-400, 400, 0);
-  sliderGroup[4] = createSlider(-400, 400, 0);
-  sliderGroup[5] = createSlider(-400, 400, 0);
-  for (var i = 0; i < 6; i++) {
-      h = map(i, 0, 6, 5, 85);
-      sliderGroup[i].position(10, height + h+15);
-      sliderGroup[i].style('width', '80px');
-  }
+  camera(-200,-200,200);
 }
 
 let k = 0.1;
@@ -34,14 +16,9 @@ let H0 = ((E0*k)/omega);
 
 
 function draw(){
-  X = sliderGroup[0].value();
-  Y = sliderGroup[1].value();
-  Z = sliderGroup[2].value();
-  centerX = sliderGroup[3].value();
-  centerY = sliderGroup[4].value();
-  centerZ = sliderGroup[5].value();
+
   phi = phi_s.value();
-  camera(X, Y, Z, centerX, centerY, centerZ, 0, 1, 0);
+  orbitControl();
   
   background(0);
   push();
