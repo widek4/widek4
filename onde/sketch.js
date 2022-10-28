@@ -10,7 +10,7 @@ let h = 25;
 let phi_s;
 
 function setup(){
-  createCanvas(600,600, WEBGL);
+  createCanvas(800,800, WEBGL);
   phi_s=createSlider(0,TWO_PI,PI/2,0.1);
   sliderGroup[0] = createSlider(-400, 400, -200);
   sliderGroup[1] = createSlider(-400, 400, -200);
